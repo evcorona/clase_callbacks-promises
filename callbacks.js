@@ -1,4 +1,5 @@
-/*console.log("archivo callbacks");
+/* Inicio de clase
+console.log("archivo callbacks");
 setTimeout(() => {      //Bloque sincrono
     console.log('Hola 2 segundo despues')
 }, 2000);
@@ -96,7 +97,7 @@ construir(muro, (errorDeConstruccion, muroConstruido) => {
   });
 });
 
-/*
+/* Apunte extra
 //Falsy
 false
 ''
@@ -113,3 +114,12 @@ arreglos con elementos
 {}
 []
 */
+
+/*Comandos terminal
+mkdir callbacks-promises
+cd calbacks-promises
+git init & npm init
+touch .gitignore
+nano .gitignore //agregar carpeta node-modules/
+cat .gitignore
+code .
