@@ -117,7 +117,7 @@ arreglos con elementos
 
 /*Comandos terminal
 mkdir callbacks-promises
-cd calbacks-promises
+cd callbacks-promises
 git init & npm init
 touch .gitignore
 nano .gitignore //agregar carpeta node-modules/
