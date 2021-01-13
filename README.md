@@ -6,7 +6,7 @@
 * Un callback puede llamarse **callback** o **cb**
 * Sintaxis por convencion de un callback: **callback ( error, data )**
 
-[More Info](https://anexsoft.com/javascript-que-son-como-usar-y-ejemplos-del-uso-de-callbacks)
+[Más info para estudiar](https://anexsoft.com/javascript-que-son-como-usar-y-ejemplos-del-uso-de-callbacks)
 
 ## Promesas
 
@@ -46,8 +46,8 @@ Anidación excesiva de funciones haciendo el código difícil de leer y mantener
 🤓 **¡Solucion!** 🤓
 
 Usar **sync / await**
-* Donde yo uso await, debo marcar la funcion contenedora (del await) como asyncrona._
-* La funcion que esta marcada con async, se vuelve una funcion que regresa una promesa_
+* Donde yo uso await, debo marcar la funcion contenedora (del await) como asyncrona.
+* La funcion que esta marcada con async, se vuelve una funcion que regresa una promesa
 ```
 async function principal() {
     const muroConstruido = await construir(muro);
@@ -60,7 +60,7 @@ principal()
     .then((resultado) => console.log("todo cool", resultado))
     .catch((error) => console.error("falle :c ", error));
 ```
-  [More Info](https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/)
+  [Más info para estudiar](https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/)
 
 ---
 ⌨️ con ❤️ por [veroxcrown](https://github.com/veroxcrown) 😊
