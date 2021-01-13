@@ -41,9 +41,9 @@ promesaConstruir
         });
 ```
 ### Riesgo de callback hell ⚠️
-_Anidación excesiva de funciones haciendo el código difícil de leer y mantener._
-**¡Solucion!** 
-_Usar **sync / await**
+Anidación excesiva de funciones haciendo el código difícil de leer y mantener.
+_**¡Solucion!**_ ✓
+_Usar **sync / await**_
 * Donde yo uso await, debo marcar la funcion contenedora (del await) como asyncrona._
 * La funcion que esta marcada con async, se vuelve una funcion que regresa una promesa_
 ```
