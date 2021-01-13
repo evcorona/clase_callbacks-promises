@@ -80,7 +80,7 @@ function aplanar(muroAAplanar) {
 function pintar(muroAPintar) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      muroAPintar.pintado = true;
+      muroAPintar.pintado = false;
       if (!muroAPintar.pintado) {
         reject("No se pudo pintar");
         return;
@@ -136,6 +136,8 @@ construir(muro)
   .catch((error) => {
     console.log("se rechazo :c", error);
   });
+  
+  //⁻-Todo esto puede provocar hell de funciones y para resolverlo utilizamos lo siguiente
   */
 
 /*
@@ -150,9 +152,10 @@ async function principal() {
   const muroConstruido = await construir(muro);
   const muroAplanado = await aplanar(muroConstruido);
   const muroPintado = await pintar(muroAplanado);
-  console.log("FIN", muroPintado);
+  return muroPintado;
 }
 
 principal()
-  .then(() => console.log("todo cool"))
-  .catch(() => console.error("falle :c "));
+  .then((resultado) => console.log("todo cool", resultado))
+  .catch((error) => console.error("falle :c ", error));
+//^-- si es una sola linea no es necesario colocar llaves
