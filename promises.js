@@ -80,7 +80,7 @@ function aplanar(muroAAplanar) {
 function pintar(muroAPintar) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      muroAPintar.pintado = false;
+      muroAPintar.pintado = true;
       if (!muroAPintar.pintado) {
         reject("No se pudo pintar");
         return;
@@ -93,7 +93,7 @@ function pintar(muroAPintar) {
 /*Modo 1
 const promesaConstruir = construir(muro);
 
-//tecnica chaining, chaininng methods anidacion de methodos con el mismo objeto
+//tecnica chaining, chaining methods anidacion de methodos con el mismo objeto
 promesaConstruir
   .then(() => {
     console.log("se resolvio :D");
@@ -106,8 +106,9 @@ promesaConstruir
 console.log("promesaConstruir:", promesaConstruir);
 */
 
-//Modo 2
-//tecnica chaining, chaininng methods anidacion de methodos con el mismo objeto
+/*
+//Modo 2 (Simplificando quitando la creacion de una variable para recibir return de una funcion)
+//tecnica chaining, chaining methods anidacion de methodos con el mismo objeto
 construir(muro)
   //funcion todo ok
   .then((muroConstruido) => {
@@ -131,7 +132,27 @@ construir(muro)
         console.log("se rechazo :c", error);
       });
   })
-  
+
   .catch((error) => {
     console.log("se rechazo :c", error);
   });
+  */
+
+/*
+async / await:
+Donde yo uso await, 
+debo marcar la funcion contenedora (del await) como asyncrona.
+La funcion que esta marcada con async,
+se vuelve una funcion que regresa una promesa
+*/
+
+async function principal() {
+  const muroConstruido = await construir(muro);
+  const muroAplanado = await aplanar(muroConstruido);
+  const muroPintado = await pintar(muroAplanado);
+  console.log("FIN", muroPintado);
+}
+
+principal()
+  .then(() => console.log("todo cool"))
+  .catch(() => console.error("falle :c "));
