@@ -123,3 +123,4 @@ touch .gitignore
 nano .gitignore //agregar carpeta node-modules/
 cat .gitignore
 code .
+*/
