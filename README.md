@@ -1,15 +1,16 @@
-Callbacks
-    Sintaxis por convencion de un callback (Convencion = acuerdo general)
-        - callback recibe siempre 2 parametros
-        - callback puede llamarse callback o cb
-        - callback(error, data)
+# Clase Callbacks y Promises
 
-    Auxiliar Info: https://anexsoft.com/javascript-que-son-como-usar-y-ejemplos-del-uso-de-callbacks
+## Callbacks
+    * callback recibe siempre 2 parametros
+    * callback puede llamarse callback o cb
+    * Sintaxis por convencion de un callback (Convencion = acuerdo general): **callback(error, data)**
 
-Promesas
+    [Auxiliar Info](https://anexsoft.com/javascript-que-son-como-usar-y-ejemplos-del-uso-de-callbacks)
+
+## Promesas
     Funciones:
-        resolve()   --> una funcion que debemos ejecutar cuando queremos resolver una promesa 
-        reject()    --> una funcion que ejecutamos cuando queremos rechazar una promesa       
+        * resolve()   --> una funcion que debemos ejecutar cuando queremos resolver una promesa 
+        * reject()    --> una funcion que ejecutamos cuando queremos rechazar una promesa       
     
     Status posibles de las Promesas:
         1.- pending
@@ -17,8 +18,8 @@ Promesas
         3.- rejected    
 
     Un objeto promesa tiene 2 funciones
-        then()  --> que se ejecuta cuando la promesa se resolvio
-        catch() --> que se ejecuta cuando la promesa se rechazo
+    * then()  --> que se ejecuta cuando la promesa se resolvio
+    * catch() --> que se ejecuta cuando la promesa se rechazo
 
     Promesa resuelta significa  => que cambio el estado de pending a resolved
     Promesa rechazada significa => el cambio de estado de pending a rejected
@@ -26,7 +27,7 @@ Promesas
     Promificacion: Es el proceso de volver promesa algo que no lo era inicialmente
 
     Tecnica chaining (chaining methods): Anidacion de métodos con el mismo objeto
-    Ejemplo:
+    ```
         promesaConstruir
             .then(() => {
             console.log("se resolvio :D");
@@ -35,13 +36,14 @@ Promesas
             .catch(() => {
             console.log("se rechazo :c");
             });
+    ```
 
     Riesgo de callback hell: Anidación excesiva de funciones haciendo el código difícil de leer y mantener.
 
-    ¡Solucion! Usar <<sync / await>>
+    **¡Solucion!** Usar <<sync / await>>
         Donde yo uso await, debo marcar la funcion contenedora (del await) como asyncrona.
         La funcion que esta marcada con async, se vuelve una funcion que regresa una promesa
-        Ejemplo:
+        ```
             async function principal() {
                 const muroConstruido = await construir(muro);
                 const muroAplanado = await aplanar(muroConstruido);
@@ -52,7 +54,8 @@ Promesas
             principal()
                 .then((resultado) => console.log("todo cool", resultado))
                 .catch((error) => console.error("falle :c ", error));
-            
-Auxiliar Info: https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/
+        ```    
+[Auxiliar Info](https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/)
 
-@veroxcrown 12/01/2020
+--
+⌨️ con ❤️ por [veroxcrown](https://github.com/veroxcrown) 😊
