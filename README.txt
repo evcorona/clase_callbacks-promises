@@ -2,8 +2,8 @@
 
 Promesas
     Funciones:
-    resolve()   --> una funcion que debemos ejecutar cuando queremos resolver una promesa 
-    reject()    --> una funcion que ejecutamos cuando queremos rechazar una promesa       
+        resolve()   --> una funcion que debemos ejecutar cuando queremos resolver una promesa 
+        reject()    --> una funcion que ejecutamos cuando queremos rechazar una promesa       
     
     Status posibles de las Promesas:
         1.- pending
@@ -31,6 +31,7 @@ Promesas
             });
 
     Riesgo de callback hell: Anidación excesiva de funciones haciendo el código difícil de leer y mantener.
+
     ¡Solucion! Usar <<sync / await>>
         Donde yo uso await, debo marcar la funcion contenedora (del await) como asyncrona.
         La funcion que esta marcada con async, se vuelve una funcion que regresa una promesa
@@ -45,7 +46,6 @@ Promesas
             principal()
                 .then((resultado) => console.log("todo cool", resultado))
                 .catch((error) => console.error("falle :c ", error));
-            //^-- si es una sola linea no es necesario colocar llaves
             
 Auxiliar Info: https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/
 
