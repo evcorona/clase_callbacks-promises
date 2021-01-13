@@ -54,3 +54,5 @@ Promesas
                 .catch((error) => console.error("falle :c ", error));
             
 Auxiliar Info: https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/
+
+@veroxcrown 12/01/2020
