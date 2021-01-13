@@ -1,4 +1,10 @@
+Callbacks
+    Sintaxis por convencion de un callback (Convencion = acuerdo general)
+        - callback recibe siempre 2 parametros
+        - callback puede llamarse callback o cb
+        - callback(error, data)
 
+    Auxiliar Info: https://anexsoft.com/javascript-que-son-como-usar-y-ejemplos-del-uso-de-callbacks
 
 Promesas
     Funciones:
@@ -48,4 +54,3 @@ Promesas
                 .catch((error) => console.error("falle :c ", error));
             
 Auxiliar Info: https://platzi.com/blog/que-es-y-como-funcionan-las-promesas-en-javascript/
-
